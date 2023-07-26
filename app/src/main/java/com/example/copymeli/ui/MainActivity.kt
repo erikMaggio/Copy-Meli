@@ -1,7 +1,8 @@
-package com.example.copymeli
+package com.example.copymeli.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.copymeli.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

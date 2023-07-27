@@ -11,7 +11,7 @@ class ProductList {
             "%20",
             "$",
             false,
-            Promotion(15.00, 6,Cards("columbia","visa")),
+            Promotion(15.00, 6, Cards("columbia", "visa")),
             "21/02/23",
             false,
             false,
@@ -34,7 +34,7 @@ class ProductList {
             "%20",
             "$",
             false,
-            Promotion(15.00, 6,Cards("Columbia","visa")),
+            Promotion(15.00, 6, Cards("Columbia", "visa")),
             "21/02/23",
             false,
             false,
@@ -49,28 +49,28 @@ class ProductList {
             "https://forever21.com.ar/media/catalog/product/cache/06cfaa02c67cf3a5c3c05d775284c631/r/e/remera-hombre-basica-escote-v-forever21-r2m091002-100_1__1_3.jpg"
         ),
         Product(
-                3,
-        "Remera cuello redondo",
-        "SunDresses",
+            3,
+            "Remera cuello redondo",
+            "SunDresses",
             29.99,
-        20.00,
-        "%20",
-        "$",
-        false,
-        Promotion(15.00, 6, Cards("Columbia","Visa")),
-        "21/02/23",
-        false,
-        false,
-        Owner("Luis", "flexiplus"),
-        43,
-        4.00,
-        43.00,
-        "Remera básica lisa de jersey de algodón 24/1. Con cuello redondo",
-        "20%",
-        4.99,
-        "new york",
-        "https://forever21.com.ar/media/catalog/product/cache/06cfaa02c67cf3a5c3c05d775284c631/r/e/remera-hombre-basica-escote-v-forever21-r2m091002-100_1__1_3.jpg"
-    ),
+            20.00,
+            "%20",
+            "$",
+            false,
+            Promotion(15.00, 6, Cards("Columbia", "Visa")),
+            "21/02/23",
+            false,
+            false,
+            Owner("Luis", "flexiplus"),
+            43,
+            4.00,
+            43.00,
+            "Remera básica lisa de jersey de algodón 24/1. Con cuello redondo",
+            "20%",
+            4.99,
+            "new york",
+            "https://forever21.com.ar/media/catalog/product/cache/06cfaa02c67cf3a5c3c05d775284c631/r/e/remera-hombre-basica-escote-v-forever21-r2m091002-100_1__1_3.jpg"
+        ),
         Product(
             4,
             "Buzo cuello redondo",
@@ -80,7 +80,7 @@ class ProductList {
             "%20",
             "$",
             false,
-            Promotion(15.00, 6, Cards("Columbia","Visa")),
+            Promotion(15.00, 6, Cards("Columbia", "Visa")),
             "21/02/23",
             false,
             false,
@@ -103,7 +103,7 @@ class ProductList {
             "%20",
             "$",
             false,
-            Promotion(15.00, 6, Cards("Columbia","Visa")),
+            Promotion(15.00, 6, Cards("Columbia", "Visa")),
             "21/02/23",
             false,
             false,
@@ -146,6 +146,6 @@ data class Product(
     val url: String
 )
 
-data class Promotion(val price: Double, val dues: Int, val cards: Cards )
+data class Promotion(val price: Double, val dues: Int, val cards: Cards)
 data class Owner(val name: String, val alias: String)
-data class Cards(val card1: String, val card2: String )
+data class Cards(val card1: String, val card2: String)

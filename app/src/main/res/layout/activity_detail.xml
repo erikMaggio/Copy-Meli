@@ -6,15 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.DetailActivity">
 
-    <ImageView
-        android:id="@+id/iv_Rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:src="@drawable/img_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_home_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/background_yellow"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
@@ -27,13 +26,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_Rating" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_star_value" />
 
     <TextView
         android:id="@+id/tv_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
+        android:layout_marginTop="12dp"
         android:padding="12dp"
         android:text="informacion precisa del producto"
         android:textAlignment="center"
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+        app:layout_constraintTop_toBottomOf="@+id/ll_home_yellow" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -75,9 +75,10 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tv_price_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:hint=" 438326462"
         android:textColor="@color/black"
@@ -86,11 +87,12 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline" />
 
     <TextView
-        android:id="@+id/tv_price_offers"
+        android:id="@+id/tv_offers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:text="Oferta : $"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -98,26 +100,89 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
     <TextView
+        android:id="@+id/tv_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Cantidad vendida :"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_offers" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Envio :"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sell" />
+
+    <TextView
         android:id="@+id/tv_price_offer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:hint="438326462"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_price_offers"
+        app:layout_constraintStart_toEndOf="@+id/tv_offers"
         app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
-    <ImageView
-        android:id="@+id/iv_send_free"
+    <TextView
+        android:id="@+id/tv_sell_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:background="@drawable/img_1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="438326462"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_sell"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price_offer" />
+
+    <TextView
+        android:id="@+id/tv_price_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="438326462"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_send"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sell_amount" />
+
+    <ImageView
+        android:id="@+id/img_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_price_offers" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/star_big_on" />
+
+    <TextView
+        android:id="@+id/tv_star_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="5"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_star"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@ package com.example.copymeli.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.copymeli.R
-import com.example.copymeli.databinding.ActivityMainBinding
+
 import com.example.copymeli.viewModel.ProductViewModel
 import com.example.copymeli.viewModel.ViewModelFactory
 

@@ -1,5 +1,7 @@
 package com.example.copymeli.model.response
 
+import java.net.URL
+
 class ProductList {
     val list = mutableListOf(
         Product(

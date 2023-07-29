@@ -9,7 +9,10 @@ import com.example.copymeli.databinding.ItemRvProductBinding
 import com.example.copymeli.model.response.Product
 import com.squareup.picasso.Picasso
 
-class ProductAdapter(private val productList: List<Product>) :
+class ProductAdapter(
+    private val productList: List<Product>,
+    private val onClick: (Product) -> Unit
+) :
     RecyclerView.Adapter<ProductHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {
@@ -19,7 +22,7 @@ class ProductAdapter(private val productList: List<Product>) :
     }
 
     override fun onBindViewHolder(holder: ProductHolder, position: Int) {
-        holder.render(productList[position])
+        holder.render(productList[position], onClick)
     }
 
     override fun getItemCount(): Int {
@@ -31,10 +34,16 @@ class ProductHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val binding = ItemRvProductBinding.bind(view)
 
-    fun render(product: Product) {
+    fun render(product: Product, onClick: (Product) -> Unit) {
         binding.textTitle.text = product.name
         Picasso.get().load(product.url).into(binding.imageProduct)
         binding.textDescription.text = product.description
         binding.textPrice.text = product.price.toString()
+
+        binding.root.setOnClickListener {
+            onClick(product)
+        }
     }
+
+
 }

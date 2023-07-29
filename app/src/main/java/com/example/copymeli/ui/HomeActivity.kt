@@ -1,8 +1,10 @@
 package com.example.copymeli.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.copymeli.R
 import com.example.copymeli.databinding.ActivityHomeBinding
 import com.example.copymeli.model.response.Product
@@ -19,13 +21,16 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        getViewModel()
+        observer()
+        action()
 
     }
 
 
     private fun observer() {
         viewModel.data.observe(this) {
-            //aca va el recyclerView
+            initRecyclerView(it)
         }
     }
 
@@ -34,18 +39,22 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-    private fun initRecyclerView(listProduct:List<Product>) {
+    private fun initRecyclerView(listProduct: List<Product>) {
 
-        val adapter = ProductAdapter(listProduct)
-
+        val adapter = ProductAdapter(listProduct, onClick = { goToDetails.invoke(it) })
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = adapter
+        binding.rvHomeProduct.layoutManager = layoutManager
+        binding.rvHomeProduct.adapter = adapter
 
     }
 
     private fun getViewModel() {
         viewModel =
             ViewModelFactory().create(ProductViewModel::class.java)
+    }
+
+    private val goToDetails = fun(item: Product) {
+
+        startActivity(Intent(this, DetailActivity::class.java))
     }
 }

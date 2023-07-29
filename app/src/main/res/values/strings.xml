@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Copy Meli</string>
+    <string name="free_shipping">Envio Gratis</string>
+    <string name="free_shipping_millon_product">en millones de productos desde $100</string>
+    <string name="address_test">Av rivadavia 12000</string>
+    <string name="price_test">Precio: $15.00</string>
+    <string name="short_test">Bermuda marron claro</string>
+    <string name="tshirt_test">Remera Cuello redondo</string>
+    <string name="inspired_favorites_test">Inspirado en tus favoritos</string>
+    <string name="recently_seen_test">Visto recientemente</string>
 </resources>

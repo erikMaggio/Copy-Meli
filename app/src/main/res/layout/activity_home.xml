@@ -23,24 +23,28 @@
 
             <ImageView
                 android:id="@+id/iv_home_menu"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_margin="6dp"
+                android:layout_weight="1"
                 android:src="@drawable/icon_menu" />
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/sv_home_search_view"
-                android:layout_width="270dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
+                android:padding="12dp"
+                android:layout_weight="5"
                 android:background="@drawable/btn_home_search_view"
                 app:iconifiedByDefault="false" />
 
             <ImageView
                 android:id="@+id/iv_home_trolley"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_margin="6dp"
+                android:layout_weight="1"
                 android:src="@drawable/icon_trolley" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -62,9 +66,9 @@
                 android:id="@+id/tv_home_"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
+                android:text="@string/address_test"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="@string/address_test" />
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_home_go"

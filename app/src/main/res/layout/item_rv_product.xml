@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="4dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recently_seen_test"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Línea divisora -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/black" />
+
+    <!-- Imagen -->
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_tshirt" />
+
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tshirt_test"
+        android:textSize="14sp" />
+
+    <!-- Precio -->
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/price_test"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Indicación de envío -->
+    <TextView
+        android:id="@+id/textShipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/free_shipping"
+        android:textColor="@color/send_green"
+        android:textSize="14sp" />
+
+</LinearLayout>

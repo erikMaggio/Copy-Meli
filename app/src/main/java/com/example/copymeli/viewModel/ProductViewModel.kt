@@ -13,10 +13,19 @@ class ProductViewModel : ViewModel() {
     private val repositoryProduct = ProductRepository()
     val data = MutableLiveData<MutableList<Product>>()
 
+    val value = MutableLiveData<Product?>()
+
     fun getList() {
         CoroutineScope(Dispatchers.IO).launch {
             val call = repositoryProduct.getList()
             data.postValue(call)
+        }
+    }
+
+    fun getProduct() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = repositoryProduct.getProduct()
+            value.postValue(call)
         }
     }
 }

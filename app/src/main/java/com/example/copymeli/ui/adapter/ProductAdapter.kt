@@ -44,6 +44,4 @@ class ProductHolder(view: View) : RecyclerView.ViewHolder(view) {
             onClick(product)
         }
     }
-
-
 }

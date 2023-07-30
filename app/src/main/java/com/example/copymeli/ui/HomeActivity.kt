@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.copymeli.R
 import com.example.copymeli.databinding.ActivityHomeBinding
 import com.example.copymeli.model.response.Product
 import com.example.copymeli.ui.adapter.ProductAdapter
+import com.example.copymeli.utils.Constants.PRODUCT
 import com.example.copymeli.viewModel.ProductViewModel
 import com.example.copymeli.viewModel.ViewModelFactory
 
@@ -24,9 +23,7 @@ class HomeActivity : AppCompatActivity() {
         getViewModel()
         observer()
         action()
-
     }
-
 
     private fun observer() {
         viewModel.data.observe(this) {
@@ -54,7 +51,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private val goToDetails = fun(item: Product) {
-
-        startActivity(Intent(this, DetailActivity::class.java))
+        val intent = Intent(this, DetailActivity::class.java)
+        PRODUCT = item
+        startActivity(intent)
     }
 }

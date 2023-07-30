@@ -34,7 +34,11 @@ class DetailActivity : AppCompatActivity() {
             binding.tvPriceOffer.text = it?.offersPrice.toString()
             binding.tvSellAmount.text = it?.sold.toString()
             binding.tvStarValue.text = it?.punctuation.toString()
-            binding.tvPriceSend.text = it?.sendPrice.toString()
+            if(it?.freeSend == true){
+                binding.tvPriceSend.text = "Gratis!"
+            }else{
+                binding.tvPriceSend.text = it?.sendPrice.toString()
+            }
 
         }
     }

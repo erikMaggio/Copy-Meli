@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_grey"
+    style=""
     tools:context=".ui.HomeActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -13,7 +13,8 @@
         android:layout_height="230dp"
         android:background="@color/background_yellow"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/ll_home_search"
@@ -34,9 +35,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:padding="12dp"
                 android:layout_weight="5"
-                android:background="@drawable/btn_home_search_view"
+                style="@style/search"
+                android:padding="12dp"
                 app:iconifiedByDefault="false" />
 
             <ImageView
@@ -60,13 +61,16 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="4dp"
+                android:layout_weight="1"
                 android:src="@drawable/icon_map" />
 
             <TextView
                 android:id="@+id/tv_home_"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.1"
                 android:text="@string/address_test"
+                style="@style/PermanentBlack"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -74,16 +78,30 @@
                 android:id="@+id/iv_home_go"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_weight="0.1"
                 android:src="@drawable/icon_go" />
+
+            <Switch
+                android:id="@+id/sw_dark_mode"
+                style="@style/PermanentBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="18sp"
+                android:text="Tema oscuro"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"
+                android:thumbTint="@color/dark_grey"
+                android:trackTint="@color/background_dark_grey"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/ll_home_free"
+            style="@style/BackChange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="14dp"
-            android:background="@color/white"
             android:padding="8dp">
 
             <ImageView
@@ -204,4 +222,12 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <include
+        android:id="@+id/error_view"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/error_query"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_home_options"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

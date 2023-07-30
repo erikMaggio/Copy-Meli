@@ -9,8 +9,40 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="blackWhite">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PermanentBlack">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BackChange">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="search">
+        <item name="android:background">@drawable/btn_home_search_view</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="background">
+        <item name="android:background">@color/background_grey</item>
+    </style>
+
+    <style name="backgroundRv">
+        <item name="android:backgroundTint">@color/grey</item>
+    </style>
+
+    <style name="lineBackground">
+        <item name="android:background">@color/black</item>
+    </style>
+
 </resources>

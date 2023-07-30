@@ -5,7 +5,8 @@
     android:layout_margin="4dp"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    style="@style/backgroundRv">
 
     <!-- Título -->
     <TextView
@@ -22,7 +23,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="10dp"
-        android:background="@android:color/black" />
+        style="@style/lineBackground" />
 
     <!-- Imagen -->
     <ImageView

@@ -5,5 +5,7 @@ import com.example.copymeli.model.response.ProductList
 
 interface Service {
 
-    fun getList():MutableList<Product>
+    fun getList(): MutableList<Product>
+
+    fun getProduct(): Product?
 }
